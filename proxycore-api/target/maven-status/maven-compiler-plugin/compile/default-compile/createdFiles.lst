@@ -1,0 +1,10 @@
+dev/yesithx/proxycore/api/event/NetworkAnnounceEvent.class
+dev/yesithx/proxycore/api/manager/IAnnounceManager.class
+dev/yesithx/proxycore/api/ProxyCoreAPI.class
+dev/yesithx/proxycore/api/event/ProxyCoreEvent.class
+dev/yesithx/proxycore/api/manager/IMessageManager.class
+dev/yesithx/proxycore/api/event/MaintenanceToggleEvent.class
+dev/yesithx/proxycore/api/manager/IMaintenanceManager.class
+dev/yesithx/proxycore/api/command/ProxyCoreCommandSender.class
+dev/yesithx/proxycore/api/command/NetworkPlayer.class
+dev/yesithx/proxycore/api/IProxyCorePlugin.class

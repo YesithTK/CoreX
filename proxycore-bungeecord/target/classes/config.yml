@@ -1,0 +1,14 @@
+# ProxyCore Configuration
+# by YesithTK
+
+maintenance:
+  enabled: false
+
+announcements:
+  enabled: true
+  interval: 60  # seconds between each announcement
+  messages:
+    - "&6Welcome to the network! Enjoy your stay."
+    - "&bJoin our Discord for news and updates!"
+    - "&aReport bugs with /report in-game."
+    - "&dFollow us on social media for events and giveaways!"

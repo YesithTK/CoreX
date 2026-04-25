@@ -1,0 +1,5 @@
+name: ProxyCore
+version: 1.0.0
+main: dev.yesithx.proxycore.bungeecord.ProxyCoreBungee
+author: YesithTK
+description: All-in-one proxy utilities for BungeeCord networks
