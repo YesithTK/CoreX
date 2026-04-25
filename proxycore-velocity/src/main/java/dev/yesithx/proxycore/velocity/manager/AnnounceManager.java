@@ -1,17 +1,17 @@
 package dev.yesithx.proxycore.velocity.manager;
 
+import com.velocitypowered.api.scheduler.ScheduledTask;
 import dev.yesithx.proxycore.velocity.ProxyCoreVelocity;
 import dev.yesithx.proxycore.velocity.util.ColorUtil;
 
 import java.util.List;
-import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 public class AnnounceManager {
 
     private final ProxyCoreVelocity plugin;
     private int index = 0;
-    private ScheduledFuture<?> task;
+    private ScheduledTask task;
 
     public AnnounceManager(ProxyCoreVelocity plugin) {
         this.plugin = plugin;
@@ -22,6 +22,7 @@ public class AnnounceManager {
         if (!enabled) return;
 
         int interval = plugin.getConfigManager().getInt("announcements.interval", 60);
+
         task = plugin.getServer().getScheduler()
                 .buildTask(plugin, () -> {
                     List<String> messages = plugin.getConfigManager().getStringList("announcements.messages");
@@ -36,12 +37,27 @@ public class AnnounceManager {
     }
 
     public void stopScheduler() {
-        if (task != null) task.cancel(false);
+        if (task != null) {
+            task.cancel();
+            task = null;
+        }
     }
 
     public void reload() {
         stopScheduler();
         index = 0;
         startScheduler();
+    }
+
+    public boolean isRunning() {
+        return task != null;
+    }
+
+    public List<String> getMessages() {
+        return plugin.getConfigManager().getStringList("announcements.messages");
+    }
+
+    public int getIntervalSeconds() {
+        return plugin.getConfigManager().getInt("announcements.interval", 60);
     }
 }
