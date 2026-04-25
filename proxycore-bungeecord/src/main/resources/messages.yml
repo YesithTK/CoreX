@@ -1,0 +1,15 @@
+# ProxyCore Messages
+# Use & for color codes
+
+prefix: "&8[&6ProxyCore&8] &r"
+
+no-permission: "&cYou don't have permission to do that."
+player-not-found: "&cPlayer &e%player% &cnot found or offline."
+default-kick-reason: "&cYou have been kicked from the network."
+maintenance-kick: "&c&lServer Maintenance\n\n&7The network is currently under maintenance.\n&7Please try again later."
+
+find-usage: "&cUsage: /find <player>"
+find-result: "&a%player% &7is connected to &e%server%&7."
+
+announce-prefix: "&8[&6Announce&8] &r"
+broadcast-prefix: "&8[&4Broadcast&8] &r"
