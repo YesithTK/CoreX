@@ -1,0 +1,8 @@
+{
+  "id": "proxycore",
+  "name": "ProxyCore",
+  "version": "1.0.0",
+  "description": "All-in-one proxy utilities for Velocity networks",
+  "authors": ["YesithTK"],
+  "main": "dev.yesithx.proxycore.velocity.ProxyCoreVelocity"
+}
